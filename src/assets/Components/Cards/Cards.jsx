@@ -9,7 +9,7 @@ const Cards = ({imagem, titulo, descricao, preco, precoDesc, qtdParcela, valorPa
       <p className={S.font} >{descricao}</p><br/>
       <p className={S.font} >De: R${preco}</p>
       <h3 className={S.h3}>Por: R${precoDesc}</h3>
-      <p className={S.font} >{qtdParcela}X de R${valorParcela}</p><br/>
+      <p className={S.font} >{qtdParcela}x de R${valorParcela}</p><br/>
       
       <button className={S.button}>Comprar</button>
     </div>

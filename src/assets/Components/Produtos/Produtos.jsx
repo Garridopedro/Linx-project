@@ -16,37 +16,37 @@ const Produtos = () => {
                         imagem={'https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/c/e/celular-smartphone-galaxy-a32-6-4-128gb-samsung_472403.jpg'}
                         titulo={'Samsung M23'}
                         descricao={'Smartphone Samsung Galaxy M23 5G 128GB Processador Snapdragon Tela 6.6" Dual Chip 6GB RAM Câmera Tripla '}
-                        precoAntes={'899,90'}
-                        precoAtual={'699,90'}
-                        precoParcela={'69,00'}
-                        numParcela={'10'}
+                        preco={'899,90'}
+                        precoDesc={'699,90'}
+                        qtdParcela={'10'}
+                        valorParcela={'69,90'}
                     />
                     <Cards
                         imagem={'https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/c/e/celular-smartphone-galaxy-a32-6-4-128gb-samsung_472403.jpg'}
                         titulo={'Samsung M23'}
                         descricao={'Smartphone Samsung Galaxy M23 5G 128GB Processador Snapdragon Tela 6.6" Dual Chip 6GB RAM Câmera Tripla '}
-                        precoAntes={'899,90'}
-                        precoAtual={'699,90'}
-                        precoParcela={'69,00'}
-                        numParcela={'10'}
+                        preco={'899,90'}
+                        precoDesc={'699,90'}
+                        qtdParcela={'10'}
+                        valorParcela={'69,90'}
                     />
                     <Cards
                         imagem={'https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/c/e/celular-smartphone-galaxy-a32-6-4-128gb-samsung_472403.jpg'}
                         titulo={'Samsung M23'}
                         descricao={'Smartphone Samsung Galaxy M23 5G 128GB Processador Snapdragon Tela 6.6" Dual Chip 6GB RAM Câmera Tripla '}
-                        precoAntes={'899,90'}
-                        precoAtual={'699,90'}
-                        precoParcela={'69,00'}
-                        numParcela={'10'}
+                        preco={'899,90'}
+                        precoDesc={'699,90'}
+                        qtdParcela={'10'}
+                        valorParcela={'69,90'}
                     />
                     <Cards
                         imagem={'https://www.havan.com.br/media/catalog/product/cache/73a52df140c4d19dbec2b6c485ea6a50/c/e/celular-smartphone-galaxy-a32-6-4-128gb-samsung_472403.jpg'}
                         titulo={'Samsung M23'}
                         descricao={'Smartphone Samsung Galaxy M23 5G 128GB Processador Snapdragon Tela 6.6" Dual Chip 6GB RAM Câmera Tripla '}
-                        precoAntes={'899,90'}
-                        precoAtual={'699,90'}
-                        precoParcela={'69,00'}
-                        numParcela={'10'}
+                        preco={'899,90'}
+                        precoDesc={'699,90'}
+                        qtdParcela={'10'}
+                        valorParcela={'69,90'}
                     />
             </div>
             <div className={S.divBotao}>
