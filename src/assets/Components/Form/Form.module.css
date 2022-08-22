@@ -25,6 +25,7 @@
     height: 100px;
     text-align: left;
     font: normal normal normal 12px/18px Helvetica Neue;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     letter-spacing: 0px;
     color: #888888;
@@ -64,6 +65,7 @@ form {
     border-radius: 4px;
     opacity: 1;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 

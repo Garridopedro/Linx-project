@@ -1,8 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import S from '../Form/Form.module.css'
 import Label from '../Label/Label'
 
 export const Form = () => {
+    const [nome, setNome] = useState('')
+    const [email, setEmail] = useState('')
+    const [cpf, setCpf] = useState('')
+
+    const inputName = (e)=>{
+        setNome(e.target.value)
+        console.log(nome);
+    }
+    const inputEmail = (e)=>{
+        setEmail(e.target.value)
+        console.log(email);
+    }
+    const inputCpf = (e)=>{
+        setCpf(e.target.value)
+        console.log(cpf);
+    }
+    const retornoForms = (e)=>{
+        e.preventDefault()
+        console.log(nome, email, cpf);
+    }
+
     return (
         <div className={S.div}>
             <div className={S.texto}>
@@ -15,18 +36,18 @@ export const Form = () => {
             <div>
                 <form action="">
                     <Label texto={"Seu nome:"} />
-                    <input type="text" className={S.input} /><br />
+                    <input type="text" className={S.input} onChange={inputName} /><br />
                     <Label texto={"E-mail:"} />
-                    <input type="email" className={S.input} /><br />
+                    <input type="email" className={S.input} onChange={inputEmail} /><br />
                     <Label texto={"CPF:"} />
-                    <input type="text" className={S.input} /><br />
+                    <input type="text" className={S.input} onChange={inputCpf} /><br />
                     <div>
                         <input className={S.radio} type="radio"></input>
                         <Label className={S.radioTxt} texto={"Masculino"} />
                         <input className={S.radio} type="radio"></input>
                         <Label className={S.radioTxt} texto={"Feminino"} />
                     </div>
-                    <button className={S.button}>Enviar</button>
+                    <button onClick={retornoForms} className={S.button}>Enviar</button>
                 </form>
             </div>
         </div>

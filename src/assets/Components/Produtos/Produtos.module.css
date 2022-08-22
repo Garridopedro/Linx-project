@@ -1,0 +1,52 @@
+.divHr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 150px;
+    color: #888888;
+}
+
+.hr1 {
+    width: 600px;
+    color: #888888;
+    height: 1px;
+}
+
+.hr2 {
+    width: 600px;
+    color: #888888;
+    height: 1px;
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.btnMaisProdutos {
+    height: 35px;
+    width: 280px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    opacity: 1;
+    color: #888888;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.divBotao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
