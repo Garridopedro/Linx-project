@@ -66,7 +66,7 @@ export const Form = () => {
                     <input type="email" className={S.input} onChange={inputEmail} /><br />
                     <span className={S.span}>{emailError}</span>
                     <Label texto={"CPF:"} />
-                    <input type="text" className={S.input} onChange={inputCpf} /><br />
+                    <input type="text" placeholder='apenas números' className={S.input} onChange={inputCpf} /><br />
                     <span>{inputError}</span>
                     <div>
                         <input className={S.radio} type="radio"></input>
