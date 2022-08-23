@@ -19,6 +19,7 @@ export const Form = () => {
     }
     const inputCpf = (e) => {
         setCpf(e.target.value)
+        cpfIsValid(cpf);
         console.log(cpf);
     }
     const retornoForms = (e) => {
@@ -37,6 +38,17 @@ export const Form = () => {
         }
     }
 
+    const [inputError, setInputError] = useState('')
+
+    function cpfIsValid() {
+        if (cpf.length != 10) {
+            setInputError('CPF deve ter 11 digitos')
+            return
+        } else{
+            setInputError('CPF válido')
+        }
+    }
+
     return (
         <div className={S.div}>
             <div className={S.texto}>
@@ -49,12 +61,13 @@ export const Form = () => {
             <div>
                 <form action="">
                     <Label texto={"Seu nome:"} />
-                    <input type="text" className={S.input} onChange={inputName}/><br />
+                    <input type="text" className={S.input} onChange={inputName} /><br />
                     <Label texto={"E-mail:"} />
-                    <input type="email" className={S.input} onChange={inputEmail}/><br />
+                    <input type="email" className={S.input} onChange={inputEmail} /><br />
                     <span className={S.span}>{emailError}</span>
                     <Label texto={"CPF:"} />
                     <input type="text" className={S.input} onChange={inputCpf} /><br />
+                    <span>{inputError}</span>
                     <div>
                         <input className={S.radio} type="radio"></input>
                         <Label className={S.radioTxt} texto={"Masculino"} />
