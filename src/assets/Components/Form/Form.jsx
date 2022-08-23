@@ -1,27 +1,40 @@
 import React, { useState } from 'react'
 import S from '../Form/Form.module.css'
 import Label from '../Label/Label'
+import validator from 'validator'
 
 export const Form = () => {
     const [nome, setNome] = useState('')
     const [email, setEmail] = useState('')
     const [cpf, setCpf] = useState('')
 
-    const inputName = (e)=>{
+    const inputName = (e) => {
         setNome(e.target.value)
         console.log(nome);
     }
-    const inputEmail = (e)=>{
+    const inputEmail = (e) => {
         setEmail(e.target.value)
+        validateEmail(e)
         console.log(email);
     }
-    const inputCpf = (e)=>{
+    const inputCpf = (e) => {
         setCpf(e.target.value)
         console.log(cpf);
     }
-    const retornoForms = (e)=>{
+    const retornoForms = (e) => {
         e.preventDefault()
         console.log(nome, email, cpf);
+    }
+
+    const [emailError, setEmailError] = useState('')
+    const validateEmail = (e) => {
+        var email = e.target.value
+
+        if (validator.isEmail(email)) {
+            setEmailError('Email válido!')
+        } else {
+            setEmailError('Insira um Email válido')
+        }
     }
 
     return (
@@ -30,15 +43,16 @@ export const Form = () => {
                 <nobr><h2 className={S.h2}>Ajude o algoritmo a ser mais certeiro</h2></nobr>
                 <p className={S.p}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit esse, fugiat repellat, architecto reiciendis magni ad velit cum asperiores nemo dolore, at provident. Reprehenderit quisquam accusantium quod cum quos fugit?
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aliquid est in vel, ullam excepturi at, ducimus non nobis quaerat molestias repudiandae, neque beatae quasi deleniti eveniet necessitatibus. Illum, reprehenderit!
-                    <br/> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius esse suscipit excepturi corrupti incidunt odit quo, in, aspernatur eos, dignissimos quibusdam perspiciatis laudantium pariatur perferendis omnis. Facere officiis ex ea.
+                    <br /> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius esse suscipit excepturi corrupti incidunt odit quo, in, aspernatur eos, dignissimos quibusdam perspiciatis laudantium pariatur perferendis omnis. Facere officiis ex ea.
                 </p>
             </div>
             <div>
                 <form action="">
                     <Label texto={"Seu nome:"} />
-                    <input type="text" className={S.input} onChange={inputName} /><br />
+                    <input type="text" className={S.input} onChange={inputName}/><br />
                     <Label texto={"E-mail:"} />
-                    <input type="email" className={S.input} onChange={inputEmail} /><br />
+                    <input type="email" className={S.input} onChange={inputEmail}/><br />
+                    <span className={S.span}>{emailError}</span>
                     <Label texto={"CPF:"} />
                     <input type="text" className={S.input} onChange={inputCpf} /><br />
                     <div>

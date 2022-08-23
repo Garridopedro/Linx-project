@@ -83,3 +83,10 @@ form {
     opacity: 1;
     margin-left: 10px;
 }
+
+span {
+   font-weight: bold;
+   font-size: 15px;
+   color: red;
+   margin-top: -18px;
+}
